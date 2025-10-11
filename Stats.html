@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MLB Spotlight - Stats</title>
+    <link rel="stylesheet" href="mlb.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="mlb-image">
+        <img src="MLB_Spotlight_Logo.png" alt="MLB Spotlight Logo" />
+      </div>
+      <h1 class="site-title">MLB Spotlight</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="AL_Leaders.html">AL Leaders</a>
+        <a href="NL_Leaders.html">NL Leaders</a>
+        <a href="Stats.html">Stats</a>
+        <a href="Highlights.html">Highlights</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h2>Hitting per Game</h2>
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>League</th>
+            <th>Hits/Game</th>
+            <th>Home Runs/Game</th>
+            <th>Runs/Game</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background-color: var(--primary); color: white;">
+            <td>Blue Jays</td>
+            <td>American League</td>
+            <td>9.02</td>
+            <td>1.18</td>
+            <td>4.93</td>
+          </tr>
+          <tr style="background-color: var(--primary); color: white;">
+            <td>Mariners</td>
+            <td>American League</td>
+            <td>8.30</td>
+            <td>1.47</td>
+            <td>4.73</td>
+          </tr>
+          <tr style="background-color: var(--primary); color: white;">
+            <td>Guardians</td>
+            <td>American League</td>
+            <td>7.40</td>
+            <td>1.04</td>
+            <td>3.97</td>
+          </tr>
+          <tr style="background-color: var(--secondary); color: white;">
+            <td>Dodgers</td>
+            <td>National League</td>
+            <td>8.54</td>
+            <td>1.51</td>
+            <td>5.09</td>
+          </tr>
+          <tr style="background-color: var(--secondary); color: white;">
+            <td>Phillies</td>
+            <td>National League</td>
+            <td>8.80</td>
+            <td>1.31</td>
+            <td>4.80</td>
+          </tr>
+          <tr style="background-color: var(--secondary); color: white;">
+            <td>Brewers</td>
+            <td>National League</td>
+            <td>8.78</td>
+            <td>1.02</td>
+            <td>4.98</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Pitching - Key Rates</h2>
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>League</th>
+            <th>K/G</th>
+            <th>ERA</th>
+            <th>WHIP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background-color: var(--primary); color: white;">
+            <td>Blue Jays</td>
+            <td>American League</td>
+            <td>8.83</td>
+            <td>4.19</td>
+            <td>1.27</td>
+          </tr>
+          <tr style="background-color: var(--primary); color: white;">
+            <td>Mariners</td>
+            <td>American League</td>
+            <td>8.80</td>
+            <td>3.87</td>
+            <td>1.12</td>
+          </tr>
+          <tr style="background-color: var(--primary); color: white;">
+            <td>Guardians</td>
+            <td>American League</td>
+            <td>8.52</td>
+            <td>3.70</td>
+            <td>1.26</td>
+          </tr>
+          <tr style="background-color: var(--secondary); color: white;">
+            <td>Dodgers</td>
+            <td>National League</td>
+            <td>9.29</td>
+            <td>3.95</td>
+            <td>1.26</td>
+          </tr>
+          <tr style="background-color: var(--secondary); color: white;">
+            <td>Phillies</td>
+            <td>National League</td>
+            <td>9.08</td>
+            <td>3.79</td>
+            <td>1.23</td>
+          </tr>
+          <tr style="background-color: var(--secondary); color: white;">
+            <td>Brewers</td>
+            <td>National League</td>
+            <td>8.84</td>
+            <td>3.58</td>
+            <td>1.23</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer class="site-footer" style="background-color: var(--secondary); color: #fff; text-align: center; padding: 20px;">
+      <p style="font-size: 1.5rem;">contact@mlbspotlight.com</p>
+      <p style="font-size: 1.5rem; margin-top: 10px;">Or use the form located on the Home page</p>
+    </footer>
+
+    <div class="form-overlay" onclick="closeForm()"></div>
+    <div class="form-popup">
+      <form onsubmit="submitForm(event)">
+        <!-- ...existing form fields... -->
+      </form>
+    </div>
+  </body>
+</html>

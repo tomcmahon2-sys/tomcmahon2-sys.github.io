@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MLB Spotlight - Home</title>
+    <link rel="stylesheet" href="mlb.css" />
+    <style>
+      .league-grid {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+      }
+      .league-card {
+        text-align: center;
+        width: 300px;
+      }
+      .logo-box {
+        margin: 0 auto;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .footer-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px auto;
+        padding: 20px;
+        width: 80%;
+        max-width: 600px;
+        text-align: center;
+        font-size: 1.5rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .contact-box {
+        background-color: var(--primary);
+        color: #fff;
+      }
+      .contact-box:hover {
+        background-color: #003366; /* Darker blue */
+      }
+      .email-box {
+        background-color: var(--secondary);
+        color: #fff;
+      }
+      .form-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 2px solid var(--primary);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+      .form-popup input, .form-popup textarea, .form-popup select {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .form-popup button {
+        background-color: var(--primary);
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .form-popup button:hover {
+        background-color: #003366; /* Darker blue */
+      }
+      .thank-you-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 2px solid var(--primary);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        text-align: center;
+      }
+
+      .thank-you-popup .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: var(--secondary);
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .thank-you-popup .close-btn:hover {
+        background-color: #a30000; /* Darker red */
+      }
+
+      .form-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+    </style>
+    <script>
+      function openForm() {
+        document.querySelector(".form-popup").style.display = "block";
+        document.querySelector(".form-overlay").style.display = "block";
+      }
+
+      function closeForm() {
+        document.querySelector(".form-popup").style.display = "none";
+        document.querySelector(".form-overlay").style.display = "none";
+      }
+
+      function showThankYouPopup() {
+        document.querySelector(".thank-you-popup").style.display = "block";
+        document.querySelector(".form-overlay").style.display = "block";
+      }
+
+      function closeThankYouPopup() {
+        document.querySelector(".thank-you-popup").style.display = "none";
+        document.querySelector(".form-overlay").style.display = "none";
+        window.location.href = "index.html"; // Redirect to the home page
+      }
+
+      function submitForm(event) {
+        event.preventDefault();
+        showThankYouPopup();
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="mlb-image">
+        <img src="MLB_Spotlight_Logo.png" alt="MLB Spotlight Logo" />
+      </div>
+      <h1 class="site-title">MLB Spotlight</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="AL_Leaders.html">AL Leaders</a>
+        <a href="NL_Leaders.html">NL Leaders</a>
+        <a href="Stats.html">Stats</a>
+        <a href="Highlights.html">Highlights</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="league-grid">
+        <article class="league-card">
+          <div class="logo-box">
+            <img src="MLB_AL_logo.png" alt="AL Logo" />
+          </div>
+          <div>
+            <a class="btn" href="AL_Leaders.html">Go to AL Leaders</a>
+          </div>
+        </article>
+
+        <article class="league-card">
+          <div class="logo-box">
+            <img src="MLB_NL_logo.png" alt="NL Logo" />
+          </div>
+          <div>
+            <a class="btn" href="NL_Leaders.html">Go to NL Leaders</a>
+          </div>
+        </article>
+      </section>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.mlb.com" target="_blank" style="font-size: 1.5rem; color: var(--primary); text-decoration: none;">Visit MLB.com</a>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-box contact-box" onclick="openForm()">
+          <p>Contact Us!</p>
+        </div>
+        <div class="footer-box email-box">
+          <p>contact@mlbspotlight.com</p>
+        </div>
+      </footer>
+
+      <div class="form-overlay" onclick="closeForm()"></div>
+      <div class="form-popup">
+        <form onsubmit="submitForm(event)">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name" required />
+
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="favorite-team">Favorite Team</label>
+          <select id="favorite-team" name="favorite-team">
+            <option value="">Select a team</option>
+            <option value="Arizona Diamondbacks">Arizona Diamondbacks</option>
+            <option value="Atlanta Braves">Atlanta Braves</option>
+            <option value="Baltimore Orioles">Baltimore Orioles</option>
+            <option value="Boston Red Sox">Boston Red Sox</option>
+            <option value="Chicago White Sox">Chicago White Sox</option>
+            <option value="Chicago Cubs">Chicago Cubs</option>
+            <option value="Cincinnati Reds">Cincinnati Reds</option>
+            <option value="Cleveland Guardians">Cleveland Guardians</option>
+            <option value="Colorado Rockies">Colorado Rockies</option>
+            <option value="Detroit Tigers">Detroit Tigers</option>
+            <option value="Houston Astros">Houston Astros</option>
+            <option value="Kansas City Royals">Kansas City Royals</option>
+            <option value="Los Angeles Angels">Los Angeles Angels</option>
+            <option value="Los Angeles Dodgers">Los Angeles Dodgers</option>
+            <option value="Miami Marlins">Miami Marlins</option>
+            <option value="Milwaukee Brewers">Milwaukee Brewers</option>
+            <option value="Minnesota Twins">Minnesota Twins</option>
+            <option value="New York Yankees">New York Yankees</option>
+            <option value="New York Mets">New York Mets</option>
+            <option value="Oakland Athletics">Oakland Athletics</option>
+            <option value="Philadelphia Phillies">Philadelphia Phillies</option>
+            <option value="Pittsburgh Pirates">Pittsburgh Pirates</option>
+            <option value="San Diego Padres">San Diego Padres</option>
+            <option value="San Francisco Giants">San Francisco Giants</option>
+            <option value="Seattle Mariners">Seattle Mariners</option>
+            <option value="St. Louis Cardinals">St. Louis Cardinals</option>
+            <option value="Tampa Bay Rays">Tampa Bay Rays</option>
+            <option value="Texas Rangers">Texas Rangers</option>
+            <option value="Toronto Blue Jays">Toronto Blue Jays</option>
+            <option value="Washington Nationals">Washington Nationals</option>
+          </select>
+
+          <label for="feedback">Feedback</label>
+          <textarea id="feedback" name="feedback" rows="4"></textarea>
+
+          <label>
+            <input type="checkbox" name="newsletter" /> I would like to receive monthly updates and newsletters
+          </label>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="form-overlay" onclick="closeThankYouPopup()"></div>
+      <div class="thank-you-popup">
+        <button class="close-btn" onclick="closeThankYouPopup()">X</button>
+        <p>Thank you! We will reach out soon.</p>
+      </div>
+    </main>
+  </body>
+</html>

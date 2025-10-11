@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>NL Leaders</title>
+    <link rel="stylesheet" href="mlb.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="mlb-image">
+        <img src="MLB_Spotlight_Logo.png" alt="MLB Spotlight Logo" />
+      </div>
+      <h1 class="site-title">NL Leaders</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="AL_Leaders.html">AL Leaders</a>
+        <a href="NL_Leaders.html">NL Leaders</a>
+        <a href="Stats.html">Stats</a>
+        <a href="Highlights.html">Highlights</a>
+      </nav>
+    </header>
+
+    <main class="container" style="font-size: 1.5rem;">
+      <section class="team-grid">
+        <article class="team-card">
+          <div class="team-row">
+            <div class="logo-box">
+              <img src="Brewers_Logo.svg" alt="Team 1 Logo" />
+            </div>
+            <div class="stadium-box">
+              <img src="Brewer_Stadium.jpg" alt="American Family Field Stadium" />
+            </div>
+            <div class="team-info">
+              <p>Division Won: <span>National League Central</span></p>
+              <p>Team Name: <span>Milwaukee Brewers</span></p>
+              <p>Record: <span>97 Wins 65 Losses</span></p>
+              <p>Division Titles Won: <span>5</span></p>
+              <p>Team MVP: <span>Freddy Peralta</span></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-row">
+            <div class="logo-box">
+              <img src="Phillies_logo.png" alt="Team 2 Logo" />
+            </div>
+            <div class="stadium-box">
+              <img src="Phillies_Stadium.jpg" alt="Citizens Bank Park Stadium" />
+            </div>
+            <div class="team-info">
+              <p>Division Won: <span>National League East</span></p>
+              <p>Team Name: <span>Philadelphia Phillies</span></p>
+              <p>Record: <span>96 Wins 66 Losses</span></p>
+              <p>Division Titles Won: <span>13</span></p>
+              <p>Team MVP: <span>Kyle Schwarber</span></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-row">
+            <div class="logo-box">
+              <img src="Dodgers_Logo.png" alt="Team 3 Logo" />
+            </div>
+            <div class="stadium-box">
+              <img src="Dodger_Stadium.jpg" alt="Dodger Stadium" />
+            </div>
+            <div class="team-info">
+              <p>Division Won: <span>National League West</span></p>
+              <p>Team Name: <span>Los Angeles Dodgers</span></p>
+              <p>Record: <span>93 Wins 69 Losses</span></p>
+              <p>Division Titles Won: <span>23</span></p>
+              <p>Team MVP: <span>Shohei Ohtani</span></p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer" style="background-color: var(--secondary); color: #fff; text-align: center; padding: 20px;">
+      <p style="font-size: 1.5rem;">contact@mlbspotlight.com</p>
+      <p style="font-size: 1.5rem; margin-top: 10px;">Or use the form located on the Home page</p>
+    </footer>
+
+    <div class="form-overlay" onclick="closeForm()"></div>
+    <div class="form-popup">
+      <form onsubmit="submitForm(event)">
+        <!-- ...existing form fields... -->
+      </form>
+    </div>
+  </body>
+</html>

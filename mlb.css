@@ -1,0 +1,194 @@
+:root{
+    --text: #050315;
+    --background: #fbfbfe;
+    --primary: #1c137e;
+    --secondary: #cd1702;
+    --accent: #bbd5fb;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    color:var(--text);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--background) 55%, #ffffff 100%);
+    background-attachment: fixed;
+    -webkit-font-smoothing:antialiased;
+}
+.site-header{
+    text-align:center;
+    padding:24px 12px 12px;
+}
+.mlb-image{
+    width:60%;
+    max-width:720px;
+    margin:0 auto 12px;
+    border:6px solid var(--text);
+    padding:12px;
+    background:#fff;
+}
+.mlb-image img{display:block;width:100%;height:auto}
+.site-title{
+    display:inline-block;
+    background:var(--accent);
+    padding:8px 16px;
+    margin:8px 0 18px;
+    border:4px solid var(--text);
+    font-weight:700;
+    letter-spacing:0.5px;
+}
+.main-nav{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:18px 0}
+.main-nav a{border:2px solid var(--text);padding:8px 14px;text-decoration:none;color:var(--text);background:#fff}
+.container{min-height:60vh;padding:40px 20px;display:flex;flex-direction:column;align-items:stretch;padding-left:80px;margin: 0 auto;max-width: 1200px}
+.league-grid{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    align-items:start;
+    padding-top:20px
+}
+.league-card{
+  width:400px;
+  text-align:center;
+}
+.logo-box{
+    width:400px;
+    height:240px;
+    border:4px solid var(--text);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+}
+.logo-box img {
+  width: auto;
+  height: 300px;
+  object-fit: contain;
+}
+.stadium-box {
+  width: 400px;
+  height: auto;
+  background: #fff;
+}
+.stadium-box img {
+  width: auto;
+  height: 300px;
+  object-fit: contain;
+}
+.btn{
+    display:inline-block;
+    margin:14px auto 6px;
+    border:3px solid var(--text);
+    background:transparent;
+    padding:8px 12px;
+    text-decoration:none;
+    color:var(--text);
+    font-weight:600
+}
+.league-desc{
+  margin-top:6px;
+  font-style:italic;
+}
+.site-footer{margin-top:80px;display:flex;justify-content:center}
+.footer-links{border:4px solid var(--text);background:var(--accent);padding:8px 14px}
+@media (max-width:820px){
+    .mlb-image{width:90%}
+    .league-grid{grid-template-columns:1fr;gap:40px}
+    .logo-box{
+        width:300px;
+        height:185px;
+    }
+    .league-card{width:300px}
+}
+.site-header .site-title{font-size:1.25rem}
+.main-nav a:hover{background:var(--accent)}
+.btn:hover{background:var(--accent)}
+.team-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.logo-box {
+  flex-shrink: 0;
+  width: 150px;
+  height: 150px;
+  border: 2px solid var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.team-info {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 80px; /
+}
+
+.league-grid .logo-box {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.league-card .btn {
+  margin: 10px auto;
+}
+
+.league-card .league-desc {
+  margin-top: 5px;
+}
+
+.team-card {
+  margin-bottom: 80px;
+}
+
+/* Add styles for the stats table */
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.stats-table th,
+.stats-table td {
+  border: 1px solid var(--text);
+  padding: 10px;
+}
+
+.stats-table thead th {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.stats-table tbody tr:nth-child(1) {
+  background-color: red;
+  color: #fff;
+}
+
+.stats-table tbody tr:nth-child(2) {
+  background-color: blue;
+  color: #fff;
+}
+
+.stats-table tbody td {
+  font-size: 1.1rem;
+}
+
+
+.stats-table thead tr:first-child th {
+  background-color: transparent;
+  color: var(--text);
+}
+
+.stats-table tbody tr.highlight-row {
+  background-color: transparent;
+  color: var(--text);
+}
